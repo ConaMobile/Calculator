@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/card_line"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/adView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:backgroundTint="@color/black"
+                    android:padding="10dp"
+                    android:text="@string/_0"
+                    android:layout_gravity="bottom"
+                    android:textColor="@color/white"
+                    android:textSize="50sp"
+                    android:gravity="end"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/txt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:layout_gravity="bottom"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/green"
+                    android:textSize="40sp"
+                    tools:ignore="UnusedAttribute" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintLeft_toLeftOf="parent"
+            ads:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/info_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/black"
+        android:clickable="true"
+        android:contentDescription="TODO"
+        android:filterTouchesWhenObscured="true"
+        android:focusable="true"
+        android:src="@drawable/ic_baseline_info_24"
+        android:tintMode="add"
+        app:borderWidth="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="40dp"
+        tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/black_white"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@id/grid_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        tools:ignore="UnusedAttribute" />
+
+
+        <GridLayout
+            android:id="@+id/grid_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:columnCount="4"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/c_color"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/c"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_c"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_c"
+                    app:layout_constraintRight_toRightOf="@id/btn_c"
+                    app:layout_constraintTop_toTopOf="@id/btn_c"
+                    tools:ignore="UnusedAttribute" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_foiz"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_foiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/foiz"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_foiz"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_foiz"
+                    app:layout_constraintRight_toRightOf="@id/btn_foiz"
+                    app:layout_constraintTop_toTopOf="@id/btn_foiz"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_bolu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_bolu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/bolu"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_bolu"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_bolu"
+                    app:layout_constraintRight_toRightOf="@id/btn_bolu"
+                    app:layout_constraintTop_toTopOf="@id/btn_bolu"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_backspace"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <ImageView
+                    android:id="@+id/backpace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:scaleX="0.4"
+                    android:scaleY="0.4"
+                    android:src="@drawable/backspace"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_backspace"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_backspace"
+                    app:layout_constraintRight_toRightOf="@id/btn_backspace"
+                    app:layout_constraintTop_toTopOf="@id/btn_backspace"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
+
+
+                <TextView
+                    android:id="@+id/txt_x2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_backspace"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_backspace"
+                    app:layout_constraintRight_toRightOf="@id/btn_backspace"
+                    app:layout_constraintTop_toTopOf="@id/btn_backspace"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/_7"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_7"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_7"
+                    app:layout_constraintRight_toRightOf="@id/btn_7"
+                    app:layout_constraintTop_toTopOf="@id/btn_7"
+                    tools:ignore="UnusedAttribute" />
+
+                <ImageView
+                    android:id="@+id/backpace_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:scaleX="0.4"
+                    android:scaleY="0.4"
+                    android:src="@drawable/backspace"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_7"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_7"
+                    app:layout_constraintRight_toRightOf="@id/btn_7"
+                    app:layout_constraintTop_toTopOf="@id/btn_7"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/_8"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_8"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_8"
+                    app:layout_constraintRight_toRightOf="@id/btn_8"
+                    app:layout_constraintTop_toTopOf="@id/btn_8"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/_9"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_9"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_9"
+                    app:layout_constraintRight_toRightOf="@id/btn_9"
+                    app:layout_constraintTop_toTopOf="@id/btn_9"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_x"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_x"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_x"
+                    app:layout_constraintRight_toRightOf="@id/btn_x"
+                    app:layout_constraintTop_toTopOf="@id/btn_x"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/_4"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_4"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_4"
+                    app:layout_constraintRight_toRightOf="@id/btn_4"
+                    app:layout_constraintTop_toTopOf="@id/btn_4"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/_5"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_5"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_5"
+                    app:layout_constraintRight_toRightOf="@id/btn_5"
+                    app:layout_constraintTop_toTopOf="@id/btn_5"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/_6"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_6"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_6"
+                    app:layout_constraintRight_toRightOf="@id/btn_6"
+                    app:layout_constraintTop_toTopOf="@id/btn_6"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_minus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:scaleX="1.5"
+                    android:text="@string/minus"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_minus"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_minus"
+                    app:layout_constraintRight_toRightOf="@id/btn_minus"
+                    app:layout_constraintTop_toTopOf="@id/btn_minus"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/_1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_1"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_1"
+                    app:layout_constraintRight_toRightOf="@id/btn_1"
+                    app:layout_constraintTop_toTopOf="@id/btn_1"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_2"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_2"
+                    app:layout_constraintRight_toRightOf="@id/btn_2"
+                    app:layout_constraintTop_toTopOf="@id/btn_2"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/_3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_3"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_3"
+                    app:layout_constraintRight_toRightOf="@id/btn_3"
+                    app:layout_constraintTop_toTopOf="@id/btn_3"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_plus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/plus"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_plus"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_plus"
+                    app:layout_constraintRight_toRightOf="@id/btn_plus"
+                    app:layout_constraintTop_toTopOf="@id/btn_plus"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_qavus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_qavus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/x2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    android:scaleX="0.95"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_qavus"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_qavus"
+                    app:layout_constraintRight_toRightOf="@id/btn_qavus"
+                    app:layout_constraintTop_toTopOf="@id/btn_qavus"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_0"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_0"
+                    app:layout_constraintRight_toRightOf="@id/btn_0"
+                    app:layout_constraintTop_toTopOf="@id/btn_0"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_nuq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/black_white"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/txt_nuq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="false"
+                    android:fontFamily="@font/allerta"
+                    android:gravity="center"
+                    android:text="@string/nuq"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/nuq_default_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_nuq"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_nuq"
+                    app:layout_constraintRight_toRightOf="@id/btn_nuq"
+                    app:layout_constraintTop_toTopOf="@id/btn_nuq"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                tools:ignore="UselessLeaf"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    app:borderWidth="0dp"
+                    android:id="@+id/btn_ten"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/black_white"
+                    android:contentDescription="TODO"
+                    android:outlineAmbientShadowColor="@color/black_white"
+                    android:outlineSpotShadowColor="@color/black_white"
+                    app:backgroundTint="@color/green"
+                    app:elevation="0dp"
+                    tools:ignore="ContentDescription,HardcodedText,MissingConstraints,UnusedAttribute,VectorDrawableCompat" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:scaleX="0.4"
+                    android:scaleY="0.4"
+                    android:src="@drawable/equal"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_ten"
+                    app:layout_constraintLeft_toLeftOf="@id/btn_ten"
+                    app:layout_constraintRight_toRightOf="@id/btn_ten"
+                    app:layout_constraintTop_toTopOf="@id/btn_ten"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
